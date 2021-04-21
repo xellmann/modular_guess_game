@@ -33,3 +33,9 @@ def play_guess_game():
         elif guess < secret:
             print("Your guess is not correct... try something bigger")
 
+
+def game_decision():
+    decision = input("To play the guess game press 'A', to watch the best scores press 'B', "
+            "to quit the game press 'C'")
+    return decision
+
