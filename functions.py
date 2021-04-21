@@ -8,7 +8,7 @@ def get_high_score():
     return prihisco
 
 
-def play_guess_game():
+def play_guess_game(difficulty):
     import datetime
     import json
     import random
@@ -28,9 +28,9 @@ def play_guess_game():
             print("You've guessed it - congratulations! It's number " + str(secret))
             print("Attempts needed: " + str(attempts))
             break
-        elif guess > secret:
+        elif guess > secret and difficulty == "B":
             print("Your guess is not correct... try something smaller")
-        elif guess < secret:
+        elif guess < secret and difficulty == "B":
             print("Your guess is not correct... try something bigger")
 
 
@@ -38,4 +38,3 @@ def game_decision():
     decision = input("To play the guess game press 'A', to watch the best scores press 'B', "
             "to quit the game press 'C'")
     return decision
-

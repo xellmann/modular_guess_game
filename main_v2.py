@@ -13,8 +13,7 @@ while True:
     if game_decision == "A":
         difficulty_level = input("To play difficulty level hard press 'A', to play difficulty level easy press 'B'")
         while True:
-
-            play_guess_game()
+            play_guess_game(difficulty=difficulty_level)
             break
     elif game_decision == "B":
         get_high_score()
